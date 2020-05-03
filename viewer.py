@@ -19,7 +19,7 @@ img_list = [image1, image2, image3, image4, image5]
 #Status Bar
 status = Label(root, text="Image 1 of " + str(len(img_list)), bd=1, relief=SUNKEN, anchor=E)
 
-#First Image on screen
+#First Image on screen gb=global
 global gb_label
 gb_label = Label(image = img_list[0])
 gb_label.grid(row=0, column=0, columnspan=3)
@@ -73,13 +73,13 @@ def back(img_num):
 #-----------------------------------------------------------------
 #Creating Buttons
 exit_button = Button(root, text='Exit Viewer', command=root.quit)
-button_forward = Button(root, text='>>', command=lambda:forward(1))
-button_back = Button(root, text='<<', command=back, state=DISABLED)
+gb_bforward = Button(root, text='>>', command=lambda:forward(1))
+gb_bback = Button(root, text='<<', command=back, state=DISABLED)
 
 #Sending on Screen
-button_back.grid(row=1, column=0)
+gb_bback.grid(row=1, column=0)
 exit_button.grid(row=1, column=1)
-button_forward.grid(row=1, column=2, pady=10)
+gb_bforward.grid(row=1, column=2, pady=10)
 
 status.grid(row=2, column=0, columnspan=3, sticky=W+E)
 
