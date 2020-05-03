@@ -2,6 +2,7 @@ from tkinter import *
 
 root = Tk()
 root.title("Simple Calculator")
+root.iconbitmap('calc.ico') #Add icon Location
 
 #Entry Field
 inp = Entry(root, width = 45, borderwidth = 5)
